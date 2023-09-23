@@ -65,8 +65,11 @@ docker-compose up --build -d
 ### Шаг 3: Проверить работоспособность
 Теперь приложение должно быть доступным и готово к использованию по адресу:
 
-Linux: http://localhost:5173
-Windows: http://localhost:5173
+**Linux**: 
+http://localhost:5173
+
+**Windows**: 
+http://localhost:5173
 
 ### Шаг 4: Остановить контейнеры (использовав docker-compose up --build -d)
 Чтобы остановить контейнеры, выполните следующую команду:
