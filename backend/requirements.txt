@@ -1,0 +1,6 @@
+flask
+requests
+python-pptx-fix
+flask_jwt_extended
+flask-cors
+db-sqlite3
