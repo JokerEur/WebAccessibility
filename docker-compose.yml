@@ -15,15 +15,5 @@ services:
       - backend
     ports:
       - 5173:5173
-  # nginx:
-  #   build:
-  #     context: ./nginx
-  #   ports:
-  #     - "80:80"
-  #   networks:
-  #     - backend
-  #   depends_on:
-  #     - backend
-
 networks:
   backend:
