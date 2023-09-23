@@ -2,3 +2,8 @@ flask
 requests
 flask-cors
 db-sqlite3
+
+nltk
+pymorphy2
+cyrtranslit
+fast-autocomplete[levenshtein]
