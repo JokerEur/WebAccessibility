@@ -7,6 +7,9 @@
 
 >Текстовые данные для наполнения прототипа контентом были собраны вручную, а фотографии сгенерированы локально моделью машинного обучения.
 
+## Демо
+![guide](https://github.com/JokerEur/WebAccessibility/assets/31983366/cc5ba58c-a908-40d8-9db2-c2509f1f742c)
+[Ссылка на демо-видео прототипа](https://drive.google.com/file/d/1rIUbims1dzlzeDi3ESrsX6Ff2huoVPU1/view?usp=sharing)
 
 ## Технологии 
 
