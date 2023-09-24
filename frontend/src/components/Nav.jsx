@@ -14,7 +14,7 @@ function Nav({setFilteredData,  setFontSize, products, name} ) {
     
   return (
     <div className='shadow bg-white-100 dark:bg-gray-700'>
-      <div className="nav fixed xl:h-[70px] flex items-center z-30  dark:bg-slate-800">  
+      <div className="nav fixed min-h-[70px] flex items-center z-30  dark:bg-slate-800">  
         <a href="https://youtu.be/dQw4w9WgXcQ"  className='ml-1 pt-1 w-[30px]' target="_blank" draggable="false" display="false">
             <img src="/static/MISIShunters.svg" className='ml-1 py-1' draggable="false" width="60%"/>
         </a>

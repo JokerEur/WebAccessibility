@@ -11,14 +11,23 @@ import ThemeToggle from './components/ThemeToggle';
 
 function App() {
   const [isAuth, setIsAuth] = useState('')
-  const [CartItem, setCartItem] = useState([])
+  const [CartItem, setCartItem] = useState([]);
   const [Proj, setProj] = useState([])
 
   useEffect(()=>{
     console.log(localStorage)
-    setIsAuth(localStorage)
-    setCartItem(JSON.parse(localStorage.getItem('cart')))
-  },[])
+    console.log(localStorage.getItem('cart'))
+    if (localStorage.length!=0)
+      setIsAuth(localStorage)
+    if(localStorage.getItem('cart')!=null)
+      setCartItem(JSON.parse(localStorage.getItem('cart')))
+  },[localStorage])
+  useEffect(()=>{
+    console.log('localStorage', localStorage)
+    console.log('isAuth', isAuth)
+    console.log(localStorage.getItem('cart'))
+   
+  })
   
   const [count, setCount] = useState(0)
 

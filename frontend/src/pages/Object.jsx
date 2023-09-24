@@ -36,7 +36,8 @@ function Object(props) {
       className={" dark:bg-slate-950 dark:text-white  "+ isAuth.contrast +' '+ isAuth.monoColor+' '+ isAuth.changeColor+" " +isAuth.saturate+ " "+isAuth.differentColor}
     >
       {console.log(isAuth.leading)}
-      <Nav className="z-30" produc={products} />
+      <Nav className="z-30" products={products} />
+      {console.log(products)}
       <div className="pt-40 ">
         <div className="w-[92%] min-h-[500px] p-2 mx-auto z-10 flex flex-col items-center bg-white-100 dark:bg-slate-700 border border-gray-200 rounded-lg shadow md:flex-row  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
           <img className="object-cover h-[480px] w-[480px] object-cover rounded-lg" src={products.image} alt=""/>

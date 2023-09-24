@@ -96,7 +96,7 @@ const [currentLanguage, setCurrentLanguage] = useState('ru');
   useEffect(()=>{
     
     postTaskData.search='Нажмите Enter или кнопку "Поиск" что бы провести автокоррекцию текста и поиск товаров.'
-    setIsAuth(postTaskData);
+    setIsAuth((prevIsAuth) => ({ ...prevIsAuth, search: 'Нажмите Enter или кнопку "Поиск" что бы провести автокоррекцию текста и поиск товаров.' }));
     if (Proj && Proj.length > 0) {
         const filterValue = transcript;
         

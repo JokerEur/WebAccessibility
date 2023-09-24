@@ -2,7 +2,8 @@ import React, { useContext, useState } from 'react';
 
 import '../App.css';
 import { Modal } from 'flowbite-react';
-
+import pic1 from '../assets/pic1.jpeg'
+import pic2 from '../assets/pic2.jpeg'
 function Help() {
     const [openModal, setOpenModal] = useState('');
     const modalProps = { openModal, setOpenModal };
@@ -16,7 +17,14 @@ function Help() {
             </button>
             <Modal  dismissible show={modalProps.openModal === 'dismissible'} size='4xl' onClose={() => modalProps.setOpenModal(undefined)}>
                 <Modal.Body className='rounded dark:bg-gray-700'>
-                    вставить картинку
+                   <img 
+                        className={"object-cover w-full h-full bg-cover md:m-2 bg-a md:rounded "} 
+                        src={pic1} alt=""
+                    />
+                    <img 
+                        className={"object-cover w-full h-full bg-cover md:m-2 bg-a md:rounded "} 
+                        src={pic2} alt=""
+                    />
                 </Modal.Body>
             </Modal>
         </>

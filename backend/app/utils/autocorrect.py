@@ -124,6 +124,7 @@ class AutoCorrector:
 
 
     def search(self, query_sentence: str) -> List[str]:
+        query_sentence = ' '.join(query_sentence.split())
         tmp = query_sentence
         if not query_sentence:
             return ''

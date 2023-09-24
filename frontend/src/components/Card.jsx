@@ -12,7 +12,7 @@ function Cards({item, speak, w, params}) {
   // console.log(imageStyles)
 
   const {isAuth}= useContext(AuthContext)
-  const {setCartItem}= useContext(CartContext)
+  const {CartItem,setCartItem}= useContext(CartContext)
   
   let pic=''
   if(isAuth.offImg=='true'|| isAuth.offImg == true )
@@ -71,7 +71,7 @@ function Cards({item, speak, w, params}) {
         </Link>
         <Link to={"/cart"} className='w-full rounded-lg  focus:ring-8 focus:ring-blue-500'>
         <div
-          onClick={()=> (setCartItem(prev=>[...prev, item]))}
+          onClick={()=> (console.log(CartItem), setCartItem(prev=>[...prev, item]))}
           className="flex items-center rounded-lg bg-blue-600 focus:scale-110 px-1 py-2.5 text-center text-xs font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-8 focus:ring-blue-500 focus:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
          
         >

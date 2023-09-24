@@ -1,5 +1,5 @@
 import {createContext} from 'react'
 
 export const AuthContext = createContext(null)
-export const CartContext = createContext(null)
-export const ProjectsContext = createContext(null)
+export const CartContext = createContext([])
+export const ProjectsContext = createContext([])
