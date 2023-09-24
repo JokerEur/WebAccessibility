@@ -1,12 +1,8 @@
 import React, { Suspense, useEffect , useState, } from "react";
 import '../App.css';
 import { Routes, Route, Navigate, redirect } from 'react-router-dom';
-import { privateRoutes, publicRoutes, farmRoutes, adminRoutes } from '../router/routes';
+import { privateRoutes } from '../router/routes';
 
-import Home from '../pages/Home.jsx'
-import Auth from '../pages/Auth.jsx'
-import Object from "../pages/Object";
-import Account from '../pages/user/Account';
 
 const AppRouted = () => {
 //     const [auth, getAuth] = useState([])
@@ -28,40 +24,24 @@ const AppRouted = () => {
 
 //   }
 //   const user = true
-    const user = {isAuth: true , role: '', id: '1', chat: '1', obj: '1', trash:''}
+    
 const authh= ""
 let routesToRender;
-if (user.role === "admin") {
-    routesToRender = adminRoutes.map(({ path, Component }) => (
-        <Route key={path} path={path} element={<Component user={user} />} exact={true} /> //props this equal user_id
-    ))
-} else if (user.role === "farm") {
-    routesToRender = farmRoutes.map(({ path, Component }) => (
-        <Route key={path} path={path} element={<Component user={user} />} exact={true} /> //props this equal user_id
-    ))
-} else {
+
     routesToRender = privateRoutes.map(({ path, Component }) => (
-        <Route key={path} path={path} element={<Component user={user} />} exact={true} />
+        <Route key={path} path={path} element={<Component/>} exact={true} />
       ));
   
-}
 
-    return user.isAuth ? (
+
+    return (
         
         <Routes>
         {console.log("!!")}
         {routesToRender}
-        <Route path="*" element={<Navigate to="/" user={user}/>}/>
+        <Route path="*" element={<Navigate to="/" />}/>
         </Routes>
     ) 
-    : 
-    (
-        <Routes>
-                <Route path='/auth' element={<Auth/>} />    
-                <Route path='*' element={<Navigate to="/auth" />} />
-            
-        </Routes>
-    );
 };
 
 export default AppRouted;

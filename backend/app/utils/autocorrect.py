@@ -125,6 +125,8 @@ class AutoCorrector:
 
     def search(self, query_sentence: str) -> List[str]:
         tmp = query_sentence
+        if not query_sentence:
+            return ''
         output_sentence = []
         for query in query_sentence.split(" "):
             if self.isSerial(query):

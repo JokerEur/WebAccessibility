@@ -3,14 +3,17 @@ import React from 'react';
 import {  BrowserRouter, Routes, Route} from 'react-router-dom';
 import './App.css'
 import AppRouted from "./components/AppRouted";
-import {AuthContext, CartContext } from './context/context';
+import {AuthContext, CartContext, ProjectsContext } from './context/context';
 import Nav from "./components/Nav";
+import ThemeToggle from './components/ThemeToggle';
 
 
 
 function App() {
   const [isAuth, setIsAuth] = useState('')
   const [CartItem, setCartItem] = useState([])
+  const [Proj, setProj] = useState([])
+
   useEffect(()=>{
     console.log(localStorage)
     setIsAuth(localStorage)
@@ -20,24 +23,20 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    
-
-<div 
-// className={ isAuth.contrast +' '+ isAuth.monoColor+' '+ isAuth.changeColo}
->
-    <AuthContext.Provider value={{isAuth, setIsAuth}}>
-    <CartContext.Provider value={{CartItem, setCartItem}}>
-
-    
+    <div >
+      <AuthContext.Provider value={{isAuth, setIsAuth}}>
+        <CartContext.Provider value={{CartItem, setCartItem}}>
+          <ProjectsContext.Provider value={{Proj, setProj}}>
             <BrowserRouter>
+              <div className='w-min fixed right-0 top-3 z-40'>
+                <ThemeToggle />
+              </div>
               <AppRouted/>
-              
             </BrowserRouter>
-            </CartContext.Provider>
+          </ProjectsContext.Provider>
+        </CartContext.Provider>
       </AuthContext.Provider>
-</div>
-    
-    
+    </div>
   )
 }
 

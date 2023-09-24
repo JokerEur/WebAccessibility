@@ -7,15 +7,15 @@ export var postTaskData= {
 
 
   largeText : false,
-  monoColor: false,
-  contrast :  false,
+  monoColor: '',
+  contrast :  '',
   sound: '',
   voice : false,
-  differentColor: false,
-  changeColor: false,
-  saturate: false,
-  offImg: false,
-
+  differentColor: '',
+  changeColor: '',
+  saturate: '',
+  offImg: '',
+  search: 'Нажмите Enter или кнопку "Поиск" что бы провести автокоррекцию текста и поиск товаров.',
   
   button: false,
   link:false,

@@ -51,10 +51,10 @@ function FirstLaunchForm({ modalProps, setFontSize }) {
 
   }
   return (
-    <Flowbite>
+    
 
     
-  <div  className="z-10 flex flex-col items-center bg-white md:flex-row  ">
+  <div  className="z-10  flex flex-col items-center  md:flex-row  ">
     {console.log(postTaskData)}
   <img 
     className={"object-cover w-48 h-[600px] bg-cover md:m-2 bg-a md:rounded "+ postTaskData.contrast+ ' '+ postTaskData.monoColor+ ' '+ postTaskData.differentColor+ ' '+ postTaskData.changeColor+ ' '+ postTaskData.saturate} 
@@ -67,19 +67,19 @@ function FirstLaunchForm({ modalProps, setFontSize }) {
       <Table className="w-[95%] mx-auto overflow-visible"  >     
         <Table.Body className="divide-y">
 
-        <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+        <Table.Row className="bg-white-100 dark:border-gray-700 dark:bg-gray-800 dark:text-white">
             <Table.Cell  className=" relative p-1 text-left hover:ring-blue-500 focus:ring-blue-100">
               <div className=" flex h-[30px] items-center inline-block">
                 <div className=" w-max mr-2 inline-block block text-2xl font-medium">
                    Настройки изображения
                 </div>
-                <DarkThemeToggle />
+                
                 
               </div> 
             </Table.Cell>
           </Table.Row>
 
-          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+          <Table.Row className="bg-white-100 dark:border-gray-700 dark:bg-gray-700">
             <Table.Cell  className=" relative p-1 text-left hover:ring-blue-500 focus:ring-blue-100">
             <div className=" flex h-[30px] items-center inline-block">
               <div className=" w-max mr-2 inline-block block">
@@ -94,7 +94,7 @@ function FirstLaunchForm({ modalProps, setFontSize }) {
             </Table.Cell>
           </Table.Row>
 
-          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+          <Table.Row className="bg-white-100dark:border-gray-700 dark:bg-gray-700">
             <Table.Cell  className=" relative p-1 text-left hover:ring-blue-500 focus:ring-blue-100">
             <div className=" flex h-[30px] items-center inline-block">
               <div className=" w-max mr-2 inline-block block">
@@ -162,7 +162,7 @@ function FirstLaunchForm({ modalProps, setFontSize }) {
 
           
 
-          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+          <Table.Row className="bg-white-100dark:border-gray-700 dark:bg-gray-700">
             <Table.Cell  className=" relative p-1 text-left hover:ring-blue-500 focus:ring-blue-100">
             <div className=" flex h-[30px] items-center inline-block">
                 <div className=" w-max mr-2 inline-block block">
@@ -256,7 +256,7 @@ function FirstLaunchForm({ modalProps, setFontSize }) {
           </Table.Row>
           
 
-          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+          <Table.Row className="bg-white-100dark:border-gray-700 dark:bg-gray-700">
             <Table.Cell  className=" relative p-1 text-left hover:ring-blue-500 focus:ring-blue-100">
             <div className=" flex h-[30px] items-center inline-block">
         <div className=" w-max mr-2 inline-block block">
@@ -322,7 +322,7 @@ function FirstLaunchForm({ modalProps, setFontSize }) {
             </Table.Cell>
           </Table.Row>
 
-          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+          <Table.Row className="bg-white-100dark:border-gray-700 dark:bg-gray-700">
             <Table.Cell  className=" relative p-1 text-left hover:ring-blue-500 focus:ring-blue-100">
             <div className=" flex h-[30px] items-center inline-block">
         <div className=" w-max mr-2 inline-block block">
@@ -340,9 +340,9 @@ function FirstLaunchForm({ modalProps, setFontSize }) {
           
           
 
-          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-            <Table.Cell  className=" relative p-1 pt-5 text-left hover:ring-blue-500 focus:ring-blue-100">
-              <div className=" flex h-[30px] items-center inline-block">
+          <Table.Row className="bg-white-100dark:border-gray-700 dark:bg-gray-700 dark:text-white">
+            <Table.Cell  className=" relative p-0 pt-5 text-left hover:ring-blue-500 focus:ring-blue-100">
+              <div className=" flex dark:bg-gray-800 rounded-t px-1 py-3 h-[30px] items-center inline-block">
                 <div className=" w-max mr-2 inline-block block text-2xl font-medium">
                   Прочие настройки
                 </div>
@@ -350,7 +350,7 @@ function FirstLaunchForm({ modalProps, setFontSize }) {
               </div> 
             </Table.Cell>
           </Table.Row>
-          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+          <Table.Row className="bg-white-100dark:border-gray-700 dark:bg-gray-700">
             <Table.Cell  className=" relative p-1 text-left hover:ring-blue-500 focus:ring-blue-100">
             <div className=" flex h-[30px] items-center inline-block">
         <div className=" w-max mr-2 inline-block block">
@@ -365,7 +365,7 @@ function FirstLaunchForm({ modalProps, setFontSize }) {
             </Table.Cell>
           </Table.Row>
 
-          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+          <Table.Row className="bg-white-100dark:border-gray-700 dark:bg-gray-700">
             <Table.Cell  className=" relative p-1 text-left hover:ring-blue-500 focus:ring-blue-100">
               <div className=" flex h-[30px] items-center inline-block">
                 <div className=" w-max mr-2 inline-block block">
@@ -380,7 +380,7 @@ function FirstLaunchForm({ modalProps, setFontSize }) {
             </Table.Cell>
           </Table.Row>
 
-          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+          <Table.Row className="bg-white-100dark:border-gray-700 dark:bg-gray-700">
             <Table.Cell  className=" relative p-1 text-left hover:ring-blue-500 focus:ring-blue-100">
             <div className=" flex h-[30px] items-center inline-block">
         <div className=" w-max mr-2 inline-block block">
@@ -459,7 +459,7 @@ function FirstLaunchForm({ modalProps, setFontSize }) {
           </Table.Row>
 
 
-          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+          <Table.Row className="bg-white-100dark:border-gray-700 dark:bg-gray-700">
             <Table.Cell  className=" relative p-1 text-left hover:ring-blue-500 focus:ring-blue-100">
             <div className=" flex h-[30px] items-center inline-block">
         <div className=" w-max mr-2 inline-block block">
@@ -506,7 +506,7 @@ function FirstLaunchForm({ modalProps, setFontSize }) {
     </div>
   </div>   
 
-  </Flowbite>
+  
 
   );
 }
