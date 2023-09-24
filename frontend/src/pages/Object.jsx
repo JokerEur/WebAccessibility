@@ -13,6 +13,7 @@ import axios from "axios";
 import { AuthContext, CartContext } from "../context/context";
 
 function Object(props) {
+  
   const params = useParams();
   const [products, setProducts]=useState([])
 
@@ -34,17 +35,19 @@ function Object(props) {
     <div
       className={" dark:bg-slate-950 dark:text-white  "+ isAuth.contrast +' '+ isAuth.monoColor+' '+ isAuth.changeColor+" " +isAuth.saturate+ " "+isAuth.differentColor}
     >
-      <Nav className="z-30" />
+      {console.log(isAuth.leading)}
+      <Nav className="z-30" produc={products} />
       <div className="pt-40 ">
         <div className="w-[92%] min-h-[500px] p-2 mx-auto z-10 flex flex-col items-center bg-white-100 dark:bg-slate-700 border border-gray-200 rounded-lg shadow md:flex-row  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
           <img className="object-cover h-[480px] w-[480px] object-cover rounded-lg" src={products.image} alt=""/>
           <div className="flex ml-5 relative  w-full flex-col text-left  justify-between leading-normal">
+          <h5 className="mb-1 text-2xl font-bold  text-gray-900 dark:text-white"> Описание товара:</h5>
             <h5 className="mb-5 text-2xl font-bold  text-gray-900 dark:text-white"> {products.product_name}</h5>
             <p className="my-3 font-normal text-gray-700 dark:text-gray-400 w-max">  <b>Фирма: </b> {products.manufacturer_name}</p>
-            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 ">  <b>Описание: </b> Здесь должно было быть полное описание данного продукта, но разработчики не хотели тратить время на сбор такого количества разных описаний для заполнения нашего маркетплейса. Время, которое было сэкономлено разработчиками, использовалось в благих целях и позволило разработать больше прекрасных функций для повышения веб-доступности платформы.</p>
+            <p className={`mb-3 font-normal  text-gray-700 dark:text-gray-400 ${isAuth.leading}`}  >  <b>Описание: </b> Здесь должно было быть полное описание данного продукта, но разработчики не хотели тратить время на сбор такого количества разных описаний для заполнения нашего маркетплейса. Время, которое было сэкономлено разработчиками, использовалось в благих целях и позволило разработать больше прекрасных функций для повышения веб-доступности платформы.</p>
             <p className="mb-5 font-normal text-gray-700 dark:text-gray-400"> <b>Цена: </b> {products.price}₽</p>
             <div>
-              <Link to={"/cart"} className='w-max rounded-lg  focus:ring-8 focus:ring-blue-500'>
+              <Link to={"/cart"} className='w-max rounded-lg '>
                 <div
                   onClick={()=> (setCartItem(prev=>[...prev, products]))}
                   className="w-max flex items-center rounded-lg bg-blue-600 focus:scale-110 px-4 py-3 text-center text-md font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-8 focus:ring-blue-500 focus:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"

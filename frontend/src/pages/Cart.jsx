@@ -41,7 +41,12 @@ function Cart() {
     <div 
     className={" dark:bg-slate-950 dark:text-white  "+ isAuth.contrast +' '+ isAuth.monoColor+' '+ isAuth.changeColor+" " +isAuth.saturate+ " "+isAuth.differentColor}
     >
-      <Nav className="z-30" />
+      
+      <Nav 
+      className="z-30" 
+      name="Корзина" 
+      // products={CartItem[CartItem.length-1]}
+      />
       <div className="   h-full   pb-10 pt-20 px-3 text-gray-400 font-semibold mt-2 w-full ">      
         {CartItem.map((photo,index) =>
           <div key={index}  className="my-2 p-2 flex flex-col items-center bg-white-100 dark:bg-slate-700 border border-gray-200 rounded-lg shadow md:flex-row dark:border-gray-700 dark:bg-gray-800 ">
@@ -53,21 +58,25 @@ function Cart() {
               <p className="mb-3 font-normal text-gray-700 dark:text-gray-400"> <b>Цена: </b> {photo.price}₽</p>
               <div>
                 {console.log(CartItem.filter(item => item.product_id != photo.product_id))}
+                <Link className="rounded-lg">
                 <div
                   onClick={()=> (setCartItem(CartItem.filter(item => item.product_id != photo.product_id)), setDel(true))}
-                  className="flex items-center md:absolute mx-auto bottom-0 right-2 w-max  rounded-lg bg-pink-500 focus:scale-110 px-4 py-2 text-center text-sm font-medium text-white hover:bg-pink-600 focus:outline-none focus:ring-8 focus:ring-pink-500 focus:bg-pink-600 dark:bg-pink-500 dark:hover:bg-pink-700 dark:focus:ring-blue-800"
+                  className="flex items-center md:absolute mx-auto bottom-0 right-2 w-max  rounded-lg bg-pink-500 focus:scale-110 px-4 py-2 text-center text-sm font-medium text-white hover:bg-pink-600 focus:ring-8 focus:ring-pink-500 focus:bg-pink-600 dark:bg-pink-500 dark:hover:bg-pink-700 dark:focus:ring-blue-800"
                   >
                   <svg class="w-[18px] h-[18px] inline-block mr-2 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h16M7 8v8m4-8v8M7 1h4a1 1 0 0 1 1 1v3H6V2a1 1 0 0 1 1-1ZM3 5h12v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5Z"/>
                   </svg>
                   del
                 </div>
+                </Link>
+                
               </div>
             </div>   
           </div>
         )}
         {CartItem[0]!=undefined?
-          <div
+        <Link>
+        <div
             onClick={()=> ( modalProps.setOpenModal('dismissible'), setOrder(true))}
             className=" absolute w-full  rounded-lg bg-blue-600 focus:scale-110 px-1 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-8 focus:ring-blue-500 focus:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
@@ -78,6 +87,8 @@ function Cart() {
                 Buy
               </div>
             </div>
+        </Link>
+          
         
           :
           <div className="h-full pt-[20%]">
@@ -94,7 +105,7 @@ function Cart() {
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5h4m-2 2V3M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.938-11H17l-2 7H5m0 0L3 4m0 0h2M3 4l-.792-3H1"/>
                   </svg>
                   Выбрать из каталога
-                </div>ё
+                </div>
               </div>
             </Link>
           </div>

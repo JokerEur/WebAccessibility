@@ -48,6 +48,8 @@ function FirstLaunchForm({ modalProps, setFontSize }) {
     localStorage.setItem('button', postTaskData.button)
     localStorage.setItem('link', postTaskData.link)
     localStorage.setItem('saturate', postTaskData.saturate)
+    localStorage.setItem('keyboard', postTaskData.keyboard)
+    localStorage.setItem('leading', postTaskData.leading)
 
   }
   return (
@@ -350,6 +352,20 @@ function FirstLaunchForm({ modalProps, setFontSize }) {
                   </div>
                 </Table.Cell>
               </Table.Row>
+              <Table.Row className="bg-white-100dark:border-gray-700 dark:bg-gray-700">
+                <Table.Cell  className=" relative p-1 text-left hover:ring-blue-500 focus:ring-blue-100">
+                  <div className=" flex h-[30px] items-center inline-block">
+                    <div className=" w-max mr-2 inline-block block">
+                      <Label htmlFor="end" className='w-max' value="Включить виртуальную клавиатуру" />
+                    </div>
+                    <Checkbox
+                      onChange={(e)=>(postTaskData.keyboard=e.target.checked)}
+                      id="accept"
+                      className="mr-2"
+                    />
+                  </div>
+                </Table.Cell>
+              </Table.Row>
 
               <Table.Row className="bg-white-100dark:border-gray-700 dark:bg-gray-700">
                 <Table.Cell  className=" relative p-1 text-left hover:ring-blue-500 focus:ring-blue-100">
@@ -359,6 +375,20 @@ function FirstLaunchForm({ modalProps, setFontSize }) {
                     </div>
                     <Checkbox
                       onChange={(e)=>(e.target.checked? postTaskData.largeText='text-3xl': postTaskData.largeText='text-base')}
+                      id="accept"
+                      className="mr-2"
+                    />
+                  </div> 
+                </Table.Cell>
+              </Table.Row>
+              <Table.Row className="bg-white-100dark:border-gray-700 dark:bg-gray-700">
+                <Table.Cell  className=" relative p-1 text-left hover:ring-blue-500 focus:ring-blue-100">
+                  <div className=" flex h-[30px] items-center inline-block">
+                    <div className=" w-max mr-2 inline-block block">
+                      <Label htmlFor="end" className='w-max' value="Увеличенный межстрочный интервал" />
+                    </div>
+                    <Checkbox
+                      onChange={(e)=>(e.target.checked? postTaskData.leading='leading-10': postTaskData.leading='leading-5')}
                       id="accept"
                       className="mr-2"
                     />

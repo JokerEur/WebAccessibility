@@ -38,10 +38,13 @@
     "react-icons": "^4.11.0",
     "react-router-dom": "^6.4.3",
     "react-select": "^5.7.2",
+    "react-simple-keyboard": "^3.7.16",
     "react-spinners": "^0.13.8",
     "react-webcam": "^7.0.1",
     "recharts": "^2.5.0",
     "sass": "^1.65.1",
+    "simple-keyboard": "^3.7.14",
+    "simple-keyboard-layouts": "^3.3.18",
     "tailwind-scrollbar-hide": "^1.1.7",
     "use-debounce": "^9.0.4"
   },

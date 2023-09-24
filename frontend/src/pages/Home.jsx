@@ -182,13 +182,13 @@ function Home(props) {
       <div className='relative mt-20  pb-5 w-[75%] h-full inline-block'>
         {params.id && 
           <h5 className={isAuth.largeText}>
-            {category.find((item) => item.category_id == params.id).category_name}
+            {category.length!=0 &&category.find((item) => item.category_id == params.id).category_name}
           </h5>
         }
         
         {filteredData.map((item,index) =>
           isAuth.largeText=='text-3xl'?
-            <Cards key={index} item={item} w='w-[500px]' isAuth={isAuth} speak={speak} params={params}/>
+            <Cards key={index} item={item} w='w-[500px] leading-10' isAuth={isAuth} speak={speak} params={params}/>
             :
             <Cards key={index} item={item} w='w-[250px]' isAuth={isAuth} speak={speak} params={params}/>
         )} 
