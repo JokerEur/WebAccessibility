@@ -1,6 +1,6 @@
 // import About from "../pages/About";
-import {LOGIN_ROUTE, HOME_ROUTE, OBJECT_ROUTE, ACCOUNT_ROUTE} from "../utils/consts";
-import Auth from "../pages/Auth";
+
+
 import Object from "../pages/Object";
 import Home from "../pages/Home";
 import Cart from "../pages/Cart";
@@ -14,6 +14,3 @@ export const privateRoutes = [
     ]
 
 
-export const publicRoutes = [
-    {path: LOGIN_ROUTE, Component: <Auth/>, exact: true},
-]

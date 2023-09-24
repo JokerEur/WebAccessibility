@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import {Card} from "flowbite-react";
 import '../App.css';
 import { AuthContext, CartContext } from '../context/context';
-import { ColorMatrix, Blind } from './ColorMatrix';
+
 import { Link } from 'react-router-dom';
 
 function Cards({item, speak, w, params}) {
@@ -13,28 +13,13 @@ function Cards({item, speak, w, params}) {
 
   const {isAuth, setIsAuth}= useContext(AuthContext)
   const {CartItem, setCartItem}= useContext(CartContext)
-  // const [pic, setPic]= useState('')
-  let pic=''
-  // useEffect(()=>{
-
-  //   if(isAuth.offImg=='true'|| isAuth.offImg == true )
-  //   {
-  //     console.log('isAuth!!!!!!', isAuth.offImg=='true', isAuth.offImg == true )
-  //     setPic('')
-  //   }
-  //   else {
-  //     console.log('isAuth?????', isAuth.offImg=='true', isAuth.offImg == true)
-  //     setPic(item.image)
-  //   }
   
-  // },[isAuth, localStorage.getItem('offImg'), params.id])
+  let pic=''
   if(isAuth.offImg=='true'|| isAuth.offImg == true )
     {
-      // console.log('isAuth!!!!!!', isAuth.offImg=='true', isAuth.offImg == true )
       pic=''
     }
     else {
-      // console.log('isAuth?????', isAuth.offImg=='true', isAuth.offImg == true)
       pic=item.image
     }
   

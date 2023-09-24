@@ -5,27 +5,6 @@ import { privateRoutes } from '../router/routes';
 
 
 const AppRouted = () => {
-//     const [auth, getAuth] = useState([])
-
-//     useEffect(() => {
-//         fetchAuth()
-//     }, [])
-
-
-//     const fetchAuth = () => {
-//       fetch('http://127.0.0.1:8000/auth')
-//           .then((res) =>
-//               res.json())
-
-//           .then((response) => {
-//               console.log(response);
-//               getAuth(response);
-//           })
-
-//   }
-//   const user = true
-    
-const authh= ""
 let routesToRender;
 
     routesToRender = privateRoutes.map(({ path, Component }) => (
