@@ -16,7 +16,7 @@ function Object(props) {
   const params = useParams();
   const [products, setProducts]=useState([])
 
-  const {CartItem, setCartItem}= useContext(CartContext)
+  const {setCartItem}= useContext(CartContext)
   useEffect(()=>{ 
     axios.post(URL+'api/product/'+params.id)
       .then(response => {

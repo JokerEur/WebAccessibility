@@ -5,20 +5,15 @@ import { privateRoutes } from '../router/routes';
 
 
 const AppRouted = () => {
-let routesToRender;
+    let routesToRender;
 
     routesToRender = privateRoutes.map(({ path, Component }) => (
         <Route key={path} path={path} element={<Component/>} exact={true} />
       ));
-  
-
-
     return (
-        
         <Routes>
-        {console.log("!!")}
-        {routesToRender}
-        <Route path="*" element={<Navigate to="/" />}/>
+            {routesToRender}
+            <Route path="*" element={<Navigate to="/" />}/>
         </Routes>
     ) 
 };

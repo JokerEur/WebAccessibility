@@ -11,8 +11,8 @@ function Cards({item, speak, w, params}) {
 //  const imageStyles = 'filter: '+customFilter
   // console.log(imageStyles)
 
-  const {isAuth, setIsAuth}= useContext(AuthContext)
-  const {CartItem, setCartItem}= useContext(CartContext)
+  const {isAuth}= useContext(AuthContext)
+  const {setCartItem}= useContext(CartContext)
   
   let pic=''
   if(isAuth.offImg=='true'|| isAuth.offImg == true )

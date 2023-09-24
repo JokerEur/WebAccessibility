@@ -18,8 +18,8 @@ import { AuthContext, ProjectsContext } from "../context/context";
 function Home(props) {
   const params = useParams();
   const [len, setLen]= useState()
-  const {isAuth, setIsAuth}= useContext(AuthContext)
-  const {Proj, setProj}= useContext(ProjectsContext)
+  const {isAuth}= useContext(AuthContext)
+  const { setProj}= useContext(ProjectsContext)
     
   const [fontSize, setFontSize] = useState({
     text:'text-base', 

@@ -4,14 +4,10 @@ import '../App.css';
 import {Link} from 'react-router-dom';
 import VoiceSearch from './VoiceSearch';
 import { Modal } from 'flowbite-react';
-import { AuthContext } from "../context/context";
 import FirstLaunchForm from "../components/FirstLaunchForm";
-import ThemeToggle from './ThemeToggle';
 import Help from './Help';
 
 function Nav({setFilteredData,  setFontSize} ) {
-    const {isAuth, setIsAuth}= useContext(AuthContext)
-    // console.log(setFontSize)
     const [openModal, setOpenModal] = useState('');
     const modalProps = { openModal, setOpenModal };
     

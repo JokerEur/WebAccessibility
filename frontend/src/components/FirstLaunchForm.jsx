@@ -7,7 +7,7 @@ import {postTaskData} from '../data/editProject'
 import testPic from '../assets/testPic.png'
 
 function FirstLaunchForm({ modalProps, setFontSize }) {
-  const {isAuth, setIsAuth}= useContext(AuthContext)
+  const { setIsAuth}= useContext(AuthContext)
   const [sound, setSound]= useState(false)
   const [contrast, setContrast]= useState(false)
   const [changeColor, setChangeColor]=useState(false)

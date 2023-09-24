@@ -1,12 +1,7 @@
 import React, { useContext, useState } from 'react';
 
 import '../App.css';
-import {Link} from 'react-router-dom';
-import VoiceSearch from './VoiceSearch';
 import { Modal } from 'flowbite-react';
-import { AuthContext } from "../context/context";
-import FirstLaunchForm from "../components/FirstLaunchForm";
-import ThemeToggle from './ThemeToggle';
 
 function Help() {
     const [openModal, setOpenModal] = useState('');

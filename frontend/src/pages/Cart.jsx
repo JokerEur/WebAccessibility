@@ -13,7 +13,7 @@ import OrderForm from "../components/OrderForm";
 
 
 function Cart() {
-  const {isAuth, setIsAuth}= useContext(AuthContext)
+  const {isAuth}= useContext(AuthContext)
     const [openModal, setOpenModal] = useState('');
     const modalProps = { openModal, setOpenModal };
     const {CartItem, setCartItem}= useContext(CartContext)

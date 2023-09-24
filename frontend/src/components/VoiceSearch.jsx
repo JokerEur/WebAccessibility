@@ -4,7 +4,7 @@ import { AuthContext, ProjectsContext } from '../context/context';
 import {postTaskData, URL} from '../data/editProject'
 
 function VoiceSearch({setFilteredData}) {
-  const {Proj, setProj}= useContext(ProjectsContext)
+  const {Proj}= useContext(ProjectsContext)
   const [recognition, setRecognition] = useState(null);
   const [listening, setListening] = useState(false);
   const [transcript, setTranscript] = useState('');
